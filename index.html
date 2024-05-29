@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas de laboratorio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(152, 200, 255, 0.856);
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #5d7b94; /* Color de fondo para el título */
+            padding: 10px; /* Espacio alrededor del título */
+        }
+        h2 {
+            margin-top: 30px;
+            padding-left: 20px;
+        }
+        /* Colores de fondo para los subtítulos */
+        h2:nth-child(2) {
+            background-color: #5d7b94; /* Nuevo alumno */
+        }
+        h2:nth-child(3) {
+            background-color: #5d7b94; /* Nuevo sistema */
+        }
+        h2:nth-child(4) {
+            background-color: #5d7b94; /* Modificar alumno */
+        }
+        h2:nth-child(5) {
+            background-color: #5d7b94; /* Modificar sistema */
+        }
+        h2:nth-child(6) {
+            background-color: #5d7b94; /* Dar de alta una página */
+        }
+        h2:nth-child(7) {
+            background-color: #5d7b94; /* Listado de alumnos */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" width="100" height="100" alt="logo">
+    </div>
+    <h1>Prácticas de laboratorio</h1>
+    <span>  Desarrollado por: José Javier Camacho Ascencio </span>
+    <span>  Correo: A01029414 - Matrícula: A01029414 - 8vo Semestre de Ingeniería Mecatrónica </span>
+    <h2>Nuevo alumno</h2>
+        <form id="form_nuevo_alumno">
+            <span>  Este campo sirve para agregar un nuevo alumno o alumna a la base de datos. Favor de ingresar el grupo al que pertenece, su matrícula y su nombre: </span>
+            <br/>
+            <br/>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <label for="grupodealumno">Grupo:</label>
+            <input type="number" id="grupodealumno">
+            <br/>
+            <label for="matriculadealumno">Matrícula:</label>
+            <input type="number" id="matriculadealumno">
+            <br/>
+            <label for="nombredealumno">Nombre:</label>
+            <input type="text" id="nombredealumno">
+            <br/>
+            <button type="submit">Agregar Alumno</button>
+            </div>
+        </form>
+    <h2>Nuevo sistema</h2>
+        <form id="form_nuevo_sistema">
+            <span>  Este campo sirve para agregar un nuevo sistema a la base de datos. Favor de ingresar las constantes 1, 2 y 3: </span>
+            <br/>
+            <br/>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <laber for="sistema1">Constante 1 del sistema:</label>
+            <input type="number" id="sistema1">
+            <br/>
+            <laber for="sistema2">Constante 2 del sistema::</label>
+                <input type="number" id="sistema2">
+            <br/>
+            <laber for="sistema3">Constante 3 del sistema::</label>
+                <input type="number" id="sistema3">
+            <br/>
+            <button type="submit">Agregar Sistema</button>
+            </div>
+        </form>
+    
+        <h2>Modificar alumno</h2>
+        <form id="form_actualizar_alumno">
+            <span>  Este campo sirve para modificar los datos de un alumno, ya sea su grupo, matrícula o nombre. Favor de ingresar el ID del alumno a modificar: </span>
+            <br/>
+            <br/>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <br/>
+            <label for="iddealumno1">Id:</label>
+            <input type="number" id="iddelalumno1">
+            <br/>
+            <label for="grupodealumno1">Nuevo grupo:</label>
+            <input type="number" id="grupodealumno1">
+            <br/>
+            <label for="matriculadealumno1">Nueva matrícula:</label>
+            <input type="number" id="matriculadealumno1">
+            <br/>
+            <label for="nombredealumno1">Nuevo nombre:</label>
+            <input type="text" id="nombredealumno1">
+            <br/>
+            <button type="submit">Actualizar Alumno</button>
+            </div>
+        </form>   
+    <h2>Modificar sistema</h2>
+        <form id="form_actualizar_sistema">
+            <span>  Este campo sirve para modificar los datos de un sistema, ya sea la constante 1, constante 2 o constante 3. Favor de ingresar el ID del sistema a modificar: </span>
+            <br/>
+            <br/>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <br/>
+            <label for="idsisteman">Id de sistema:</label>
+            <input type="number" id="idsisteman">
+            <br/>
+            <label for="sistema1n">Nueva constante 1 del sistema:</label>
+            <input type="number" id="sistema1n">
+            <br/>
+            <label for="sistema2n">Nueva constante 2 del sistema:</label>
+            <input type="number" id="sistema2n">
+            <br/>
+            <label for="sistema3n">Nueva constante 3 del sistema:</label>
+            <input type="number" id="sistema3n">
+            <br/>
+            <button type="submit">Actualizar Sistema</button>
+            </div>
+        </form>   
+
+    <h2>Dar de alta una práctica</h2>
+        <form id="form_nueva_practica">
+            <span>  Este campo sirve para agregar una nueva práctica a la base de datos. Favor de ingresar el ID del alumno, el ID del sistema y el número de práctica:</span>
+            <br/><br/>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <label for="id_alumno">ID del Alumno:</label>
+            <input type="number" id="id_alumno" required>
+            <br/>
+            <label for="id_sistema">ID del Sistema:</label>
+            <input type="number" id="id_sistema" required>
+            <br/>
+            <label for="numero_practica">Número de Práctica:</label>
+            <input type="number" id="numero_practica" required>
+            <br/>
+            <button type="submit">Agregar Práctica</button>
+            </div>
+        </form>
+    
+    <h2>Consultar Práctica por Número</h2>
+        <form id="form_consulta_practica">
+            <span>  Ingrese el número de práctica para consultar los nombres de alumnos y sistemas asociados:</span>
+            <br/><br/>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+            <label for="numero_practica">Número de Práctica:</label>
+            <input type="number" id="numero_practica_consulta" required>
+            <br/>
+            <button type="submit">Consultar</button>
+            </div>
+        </form>
+    <h2>Resultados de la Consulta</h2>
+        <div id="resultados">
+        <!-- Aquí se mostrarán los resultados -->
+         </div>
+    
+    <div class="padre">
+
+    </div>
+    <script src="{{ url_for('static', filename='API.js') }}"></script>
+</body>
+</html>
+
